@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/alumnos/<int:padron>', methods = ['GET'] )
 def buscar_alumno(padron):
     if padron <= 0:
-        return jsonify({'error':'No se ingreso un numero de padron valido, huevos'}), 400
+        return jsonify({'error':'No puede ser huevos'}), 400
 
     try:
         conn = conectar_db()
@@ -106,7 +106,7 @@ def consultar_clase(codigo_materia):
         return jsonify(alumnos_materia), 200
 
     except mysql.connector.Error:
-        return jsonify({'error': 'no se pudo conqectar a la base de datos'}), 500
+        return jsonify({'error': 'no se pudo conectar a la base de datos'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
