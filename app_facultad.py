@@ -86,7 +86,7 @@ def ingresar_nota(padron):
 @app.route('/materias/<int:codigo_materia>/alumnos', methods=['GET'])
 def consultar_clase(codigo_materia):
     if codigo_materia <= 0:
-        return jsonify({'error': 'codigo invalido'}), 400
+        return jsonify({'error': 'codigo  de la materia es invalido'}), 400
 
     try:
         conn = conectar_db()
