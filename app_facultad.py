@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/alumnos/<int:padron>', methods = ['GET'] )
 def buscar_alumno(padron):
     if padron <= 0:
-        return jsonify({'error':'No se ingreso un numero de padron valido'}), 400
+        return jsonify({'error':'No puede ser huevos'}), 400
 
     try:
         conn = conectar_db()
