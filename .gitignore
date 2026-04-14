@@ -1,0 +1,10 @@
+# Entorno virtual
+venv/
+env/
+
+# Archivos de cache de Python
+__pycache__/
+*.pyc
+
+# Archivos de la Mac
+.DS_Store
